@@ -17,7 +17,9 @@ SELECT
          IF(ciu.nombre IS NOT NULL, CONCAT(', ', ciu.nombre), ''),
          IF(prov.nombre IS NOT NULL, CONCAT(', ', prov.nombre), ''),
          IF(pais.nombre IS NOT NULL, CONCAT(', ', pais.nombre), '')
-  ) AS direccion_completa
+  ) AS direccion_completa,
+    prov.nombre as provincia,
+    ciu.nombre as ciudad
 FROM empleados em 
 JOIN tipo_empleados tipoem ON em.tipo_empleado_id=tipoem.tipo_empleado_id
 JOIN departamentos dep ON em.departamento_id=dep.departamento_id
