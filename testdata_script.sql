@@ -3,35 +3,40 @@ INSERT INTO paises (pais_id, nombre) VALUES
 (2, 'Brasil'),
 (3, 'Chile'),
 (4, 'Uruguay'),
-(5, 'Paraguay');
+(5, 'Paraguay')
+(6, 'Peru');
 
 INSERT INTO provincias (provincia_id, pais_id, nombre) VALUES
 (1, 1, 'Buenos Aires'),
 (2, 1, 'Córdoba'),
 (3, 2, 'São Paulo'),
 (4, 3, 'Santiago'),
-(5, 4, 'Montevideo');
+(5, 4, 'Montevideo')
+(6, 1, 'Tucuman');
 
 INSERT INTO ciudades (ciudad_id, provincia_id, nombre) VALUES
 (1, 1, 'La Plata'),
 (2, 2, 'Villa Carlos Paz'),
 (3, 3, 'Campinas'),
 (4, 4, 'Maipú'),
-(5, 5, 'Las Piedras');
+(5, 5, 'Las Piedras')
+(6, 6, 'San Miguel de Tucuman');
 
 INSERT INTO codigos_postales (codigo_postal_id, ciudad_id, codigo) VALUES
 (1, 1, 1900),
 (2, 2, 5152),
 (3, 3, 13083),
 (4, 4, 9580000),
-(5, 5, 90200);
+(5, 5, 90200)
+(6, 6, 4000);
 
 INSERT INTO direcciones (direccion_id, calle, numero, piso, depto, ciudad_id, provincia_id, pais_id, codigo_postal_id) VALUES
 (1, 'Calle 12', 123, 2, 4, 1, 1, 1, 1),
 (2, 'Av. San Martín', 456, NULL, NULL, 2, 2, 1, 2),
 (3, 'Rua das Flores', 789, 5, 2, 3, 3, 2, 3),
 (4, 'Av. Libertador', 1011, 3, 1, 4, 4, 3, 4),
-(5, 'Calle Rincón', 202, NULL, NULL, 5, 5, 4, 5);
+(5, 'Calle Rincón', 202, NULL, NULL, 5, 5, 4, 5)
+(6, 'Av. Avellaneda', 632, NULL, 0, 1, 6 , 6, 1, 6);
 
 INSERT INTO tipo_departamentos (nombre, descripcion) VALUES
 ('Administración', 'Gestión administrativa general'),
