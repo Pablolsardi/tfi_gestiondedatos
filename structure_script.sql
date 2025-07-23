@@ -1056,3 +1056,34 @@ create table detalle_liquidaciones (
 	created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
+
+create table cliente_rubro (
+	-- Creamos atributos
+    cliente_id int not null,
+    rubro_id int not null,
+    primary key (cliente_id, rubro_id),
+	
+	-- Definimos referencias
+    foreign key (cliente_id) references clientes(cliente_id),
+    foreign key (rubro_id) references rubros(rubro_id),
+	
+	-- Creamos created_at y updated_at
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Ranking del cliente
+create table ranking_cliente (
+	-- Creamos atributos
+    cliente_id int primary key,
+    ranking int check (ranking between 1 and 5),
+    comentarios varchar(100),
+    fecha_ranking date,
+
+	-- Definimos referencias
+    foreign key (cliente_id) references clientes(cliente_id),
+	
+	-- Creamos created_at y updated_at
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
