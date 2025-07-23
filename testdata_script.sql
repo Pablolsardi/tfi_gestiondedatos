@@ -352,7 +352,9 @@ INSERT INTO liquidaciones_sueldo (empleado_id, codigo, periodo, fecha_pago, obse
 (2, 'LS002', 202407, '2024-07-31', 'Liquidación mensual julio'),
 (3, 'LS003', 202407, '2024-07-31', 'Liquidación mensual julio'),
 (4, 'LS004', 202407, '2024-07-31', 'Liquidación mensual julio'),
-(5, 'LS005', 202407, '2024-07-31', 'Liquidación mensual julio');
+(5, 'LS005', 202407, '2024-07-31', 'Liquidación mensual julio'),
+(1, 'LS006', 202301, '2023-01-31', 'Liquidación mensual enero'),
+(2, 'LS007', 202301, '2023-01-31', 'Liquidación mensual enero');
 
 INSERT INTO conceptos (codigo, nombre, naturaleza, formula) VALUES
 ('BAS', 'Sueldo básico', true , 'horas_trabajadas * valor_hora'),
@@ -389,7 +391,19 @@ INSERT INTO detalle_liquidaciones (liquidacion_id, concepto_id, cantidad, monto_
 (5, 2, 1, 30000.00),
 (5, 3, 1, 12500.00),
 (5, 4, 1, 30000.00),
-(5, 5, 1, 35000.00);
+(5, 5, 1, 35000.00),
+
+(6, 1, 1, 280000.00),
+(6, 2, 1, 30000.00),
+(6, 3, 1, 12500.00),
+(6, 4, 1, 30000.00),
+(6, 5, 1, 35000.00),
+
+(7, 1, 1, 280000.00),
+(7, 2, 1, 30000.00),
+(7, 3, 1, 12500.00),
+(7, 4, 1, 30000.00),
+(7, 5, 1, 35000.00);
 
 INSERT INTO tratamientos (diagnostico_id, empleado_id, fecha_inicio, fecha_fin, descripcion)
 VALUES 
